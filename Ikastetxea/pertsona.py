@@ -1,4 +1,4 @@
-class pertsona:
+class Pertsona:
   skin="white"
 
   def __init__(self, i,n, s,M, ad):

@@ -1,5 +1,6 @@
-from pertsona import pertsona
-class ikaslea(pertsona):
+from Ikastetxea.Pertsona import Pertsona
+
+class Ikaslea(Pertsona):
 
 
     def __init__(self,i,n,s,M,ad,group):
