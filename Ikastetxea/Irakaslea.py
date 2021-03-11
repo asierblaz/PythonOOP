@@ -8,6 +8,7 @@ class Irakaslea(Pertsona):
 
     def setGroup(self,group):
         self.group=group
+
     def getGroup(self):
        return self.group
 
