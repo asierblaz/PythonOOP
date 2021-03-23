@@ -115,52 +115,131 @@ def taldeaSortu():
 
     tn = Taldea(kodea, zenbakia)
 
-    print("Departamentua sortu da")
-    departamentuakInprimatu()
+    print("Taldea sortu da")
+    taldeakInprimatu()
 
 def pertsonakEzabatu():
     print("-------------Pertsonak ezabatu------------")
-    zein = int(input("Sartu pertsonaren id ezabatzeko:"))
-    Funtzioak.listatikNezabatu(pertsonak,zein)
+    pertsonakInprimatu()
+    zein = int(input("Sartu ezabatu nahi duzun pertsonaren posizioa:"))
+    Funtzioak.listatikNezabatu(pertsonak,zein-1)
     print("pertsona ezabatu da")
     pertsonakInprimatu()
 
 def ikasleakEzabatu():
     print("-------------Ikasleak ezabatu------------")
-    zein = int(input("Sartu ikaslearen id ezabatzeko:"))
-    Funtzioak.listatikNezabatu(ikasleak,zein)
+    ikasleakInprimatu()
+    zein = int(input("Sartu ezabatu nahi duzun ikasleareN posizioa:"))
+    Funtzioak.listatikNezabatu(ikasleak,zein-1)
     print("Ikaslea ezabatu da")
-    pertsonakInprimatu()
+    ikasleakInprimatu()
 
 def irakasleakEzabatu():
     print("-------------irakaslea ezabatu------------")
-    zein = int(input("Sartu irakaslearen id ezabatzeko:"))
-    Funtzioak.listatikNezabatu(irakasleak,zein)
+    irakasleakInprimatu()
+    zein = int(input("Sartu ezabatu nahi duzun irakaslearen posizioa:"))
+    Funtzioak.listatikNezabatu(irakasleak,zein-1)
+
     print("irakaslea ezabatu da")
-    pertsonakInprimatu()
+    irakasleakInprimatu()
 
 def taldeakEzabatu():
     print("-------------Taldea sortu------------")
-    zein = int(input("Sartu pertsonaren id ezabatzeko:"))
-    Funtzioak.listatikNezabatu(pertsonak,zein)
-    print("pertsona ezabatu da")
-    pertsonakInprimatu()
+    taldeakInprimatu()
+    zein = int(input("Sartu ezabatu nahi duzun taldearen posizioa:"))
+    Funtzioak.listatikNezabatu(taldeak,zein-1)
+    print("taldea ezabatu da")
+    taldeakInprimatu()
 
 def departamentuakEzabatu():
     print("-------------Taldea sortu------------")
-    zein = int(input("Sartu pertsonaren id ezabatzeko:"))
-    Funtzioak.listatikNezabatu(pertsonak,zein)
-    print("pertsona ezabatu da")
+    departamentuakInprimatu()
+    zein = int(input("Sartu ezabatu nahi duzun departamentuaren posizioa:"))
+    Funtzioak.listatikNezabatu(departs,zein-1)
+    print("departamentua ezabatu da")
+    departamentuakInprimatu()
+
+
+def pertsonaAldatu():
+    print("-------------Pertsona Aldatu------------")
     pertsonakInprimatu()
+    zein = int(input("Sartu aldatu nahi duzun pertsonaren posizioa:"))
+    izena = input("Sartu Pertsonaren Izena:")
+    abizena = input("Sartu Pertsonaren Abizena:")
+    mugikorra = input("Sartu Pertsonaren Telefonoa:")
+    adina = input("Sartu Pertsonaren adina:")
+    pertsonak[zein-1].name=izena
+    pertsonak[zein-1].surname=abizena
+    pertsonak[zein-1].movile=mugikorra
+    pertsonak[zein-1].adina=adina
+    print("Pertsona aldatu da")
+    pertsonakInprimatu()
+
+def ikasleaAldatu():
+    print("-------------Ikaslea Aldatu------------")
+    ikasleakInprimatu()
+    zein = int(input("Sartu aldatu nahi duzun ikaslearen posizioa:"))
+    izena = input("Sartu ikaslearen Izena:")
+    abizena = input("Sartu ikaslearen Abizena:")
+    mugikorra = input("Sartu ikaslearen Telefonoa:")
+    adina = input("Sartu ikaslearen adina:")
+    ikasleak[zein-1].name=izena
+    ikasleak[zein-1].surname=abizena
+    ikasleak[zein-1].movile=mugikorra
+    ikasleak[zein-1].adina=adina
+    print("Ikaslea aldatu da")
+    ikasleakInprimatu()
+
+def irakasleaAldatu():
+    print("-------------Ikaslea Aldatu------------")
+    irakasleakInprimatu()
+    zein = int(input("Sartu aldatu nahi duzun irakaslearen posizioa:"))
+    izena = input("Sartu irakaslearen Izena:")
+    abizena = input("Sartu irakaslearen Abizena:")
+    mugikorra = input("Sartu irakaslearen Telefonoa:")
+    adina = input("Sartu irakaslearen adina:")
+    irakasleak[zein-1].name=izena
+    irakasleak[zein-1].surname=abizena
+    irakasleak[zein-1].movile=mugikorra
+    irakasleak[zein-1].adina=adina
+    print("Irakaslea aldatu da")
+    irakasleakInprimatu()
+
+def taldeaAldatu():
+    print("-------------Taldea Aldatu------------")
+    taldeakInprimatu()
+    kodea = input("Sartu Taldearen kodea:")
+    zenbakia = input("Sartu Taldearen zenbakia:")
+    taldeak[zein-1].kodea=kodea
+    taldeak[zein-1].zenbakia=zenbakia
+
+    print("taldea aldatu da")
+    taldeakInprimatu()
+
+def departamentuaAldatu():
+    print("-------------Departamentua Aldatu------------")
+    departamentuakInprimatu()
+    izena = input("Sartu Departamentuaren Izena:")
+    id = input("Sartu Departamentuaren kodea:")
+    departs[zein-1].kodea=izena
+    departs[zein-1].zenbakia=id
+    print("Departamentua aldatu da")
+    departamentuakInprimatu()
+
+
+
 
 print("----------Ikastetxea----------")
 print("1- Sortu\n"
       "2- Inprimatu\n"
       "3- Ezabatu\n"
-      "4- Borratu \n"
+      "4- Aldatu \n"
       "5- Irten"
 )
 aukera = int(input("Aukeratu bat: "))
+
+
+
 
 while (aukera!=5):
 
@@ -215,6 +294,26 @@ while (aukera!=5):
         if (zein == 5):
             departamentuakInprimatu()
 
+    if (aukera == 4):
+        print("Zer Aldatu nahi duzu?")
+        print("1- Pertsona\n"
+              "2- Ikaslea\n"
+              "3- Irakaslea\n"
+              "4- Taldea\n"
+              "5- Departamentua\n")
+        zein = int(input("Aukeratu bat: "))
+        if (zein == 1):
+            pertsonaAldatu()
+        if (zein == 2):
+            ikasleaAldatu()
+        if (zein == 3):
+            irakasleaAldatu()
+        if (zein == 4):
+            taldeaAldatu()
+        if (zein == 5):
+            departamentuaAldatu()
+
+
 
 
 
@@ -228,7 +327,7 @@ while (aukera!=5):
     print("1- Sortu\n"
           "2- Inprimatu\n"
           "3- Ezabatu\n"
-          "4- Borratu \n"
+          "4- Aldatu \n"
           "5- Irten"
           )
 

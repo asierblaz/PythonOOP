@@ -6,8 +6,14 @@ class Funtzioak:
 
     @staticmethod
     def listaImprimatu(lista):
-        for i in lista:
-            i.print()
+        for cont, i in enumerate(lista):
+            print(cont+1," ", end=""), i.print()
 
+    @staticmethod
     def listatikNezabatu(lista, n):
         del (lista[n])
+
+    @staticmethod
+    def listatikNezabatu(lista, n):
+        del (lista[n])
+
